@@ -1,5 +1,5 @@
 - name: conditions
-  hostname: web
+  hostS: web
   tasks:
     - name: conditions info
       ansible.builtin.command: id expense
