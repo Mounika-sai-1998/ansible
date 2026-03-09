@@ -60,9 +60,9 @@
   hosts: localhost
   vars:
     list_dict:
-      - {'key': 'course', 'value':'Devops'}
-      - {'key': 'trainer' , 'value':'siva' }
-      - {'key': 'duration' , 'value':'120 hrs'}
+    - {'key': 'course', 'value':'Devops'}
+    - {'key': 'trainer' , 'value':'siva' }
+    - {'key': 'duration' , 'value':'120 hrs'}
     tasks:
     - name: before converting list to dict
       ansible.builtin.debug:
