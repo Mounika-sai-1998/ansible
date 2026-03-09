@@ -39,4 +39,16 @@
   tasks:
   - name: to check min and max values
     ansible.builtin.debug:
-      msg: "min age : {{ ages | min }} , max age {{ ages | max }}" 
+      msg: "min age : {{ ages | min }} , max age {{ ages | max }}"
+
+- name: dictionary 
+  hosts: localhost
+  vars:
+    dict_items:
+      course: devops
+      trainer: siva
+      duration: "120 hrs"
+  tasks:
+  - name : to change map to list
+    ansible,builtin.debug:
+      msg: "{{ dict_items | dict2items }}"
