@@ -11,7 +11,6 @@
       ansible.builtin.debug:
         msg: "Hii, Iam learning {{COURSE}} from the trainer {{TRAINER}} for {{TIME}}"
 
-  tasks:
     - name: print info from variables
       ansible.builtin.debug:
         msg: "Hii, Iam learning {{COURSE}} from the trainer {{TRAINER}} for {{TIME}}"
