@@ -1,16 +1,18 @@
 - name: task level variables
   hosts: localhost
-  vars:
-    COURSE: Terraform
-    TRAINER: sivakumar
-    TIME: 120hrs
+  # vars:
+  #   COURSE: Terraform
+  #   TRAINER: sivakumar
+  #   TIME: 120hrs
   tasks:
     - name: print info from override variables
       vars:
         COURSE: devops
+        TRAINER: sivakumar
+        TIME: 120hrs
       ansible.builtin.debug:
         msg: "Hii, Iam learning {{COURSE}} from the trainer {{TRAINER}} for {{TIME}}"
 
-    - name: print info from variables
-      ansible.builtin.debug:
-        msg: "Hii, Iam learning {{COURSE}} from the trainer {{TRAINER}} for {{TIME}}"
+    # - name: print info from variables
+    #   ansible.builtin.debug:
+    #     msg: "Hii, Iam learning {{COURSE}} from the trainer {{TRAINER}} for {{TIME}}"
