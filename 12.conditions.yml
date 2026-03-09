@@ -4,6 +4,11 @@
     - name: conditions info
       ansible.builtin.command: id expense
       ignore_errors: yes
+      register: USERNAME
+
+    - name: print user info
+      ansible.builtin.debug:
+        msg: "userinfo is : {{USERNAME}}"
 
     - name: say Hello
       ansible.builtin.debug:
