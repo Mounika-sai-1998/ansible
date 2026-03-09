@@ -1,0 +1,10 @@
+- name: conditions
+  hostname: web
+  tasks:
+    - name: conditions info
+      ansible.builtin.command: id expense
+
+    - name: say Hello
+      ansible.builtin.debug:
+        msg: "HELLO"
+        
