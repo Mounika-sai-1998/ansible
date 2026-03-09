@@ -49,6 +49,25 @@
       trainer: siva
       duration: "120 hrs"
   tasks:
-  - name : to change map to list
+  - name: before convert dictionary to list
     ansible.builtin.debug:
-      msg: "{{ dict_items | dict2items }}"
+      msg: "before convert to list {{ dict_items }}"
+  - name: after convert to list
+    ansible.builtin.debug:
+      msg: "after convert dictionary to list {{ dict_items | dict2items }}"
+
+- name: list
+  hosts: localhost
+  vars:
+    list_dict:
+      - {'key': 'course', 'value':'Devops'}
+      - {'key': 'trainer' , 'value':'siva' }
+      - {'key': 'duration' , 'value':'120 hrs'}
+    tasks:
+    - name: before converting list to dict
+      ansible.buitin.debug:
+        msg: "before converting list to dictionary {{list_dict}}"
+    - name: after converting list to dictionary
+      ansible.builtin.debug:
+        msg: " after converting list to dictionary {{list_dict | list2dict}}"
+
