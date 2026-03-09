@@ -3,6 +3,7 @@
   tasks:
     - name: conditions info
       ansible.builtin.command: id expense
+      ignore_errors: yes
 
     - name: say Hello
       ansible.builtin.debug:
