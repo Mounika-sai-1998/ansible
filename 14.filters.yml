@@ -50,5 +50,5 @@
       duration: "120 hrs"
   tasks:
   - name : to change map to list
-    ansible,builtin.debug:
+    ansible.builtin.debug:
       msg: "{{ dict_items | dict2items }}"
