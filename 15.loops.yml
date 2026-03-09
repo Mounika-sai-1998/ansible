@@ -4,7 +4,7 @@
   - name: ex for loops
     ansible.builtin.debug:
       msg: " Hello {{ item }} "
-    loops:
+    loop:
     - linux
     - ansible
     - shell
