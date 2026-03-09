@@ -65,7 +65,7 @@
       - {'key': 'duration' , 'value':'120 hrs'}
     tasks:
     - name: before converting list to dict
-      ansible.buitin.debug:
+      ansible.builtin.debug:
         msg: "before converting list to dictionary {{list_dict}}"
     - name: after converting list to dictionary
       ansible.builtin.debug:
