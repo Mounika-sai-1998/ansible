@@ -3,7 +3,7 @@
   vars_prompt:
     - name: number
       prompt: enter the number
-      private: yes
+      private: no
   tasks:
   - name: check given number is greater than 10
     ansible.builtin.debug:
