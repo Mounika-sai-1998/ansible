@@ -10,6 +10,10 @@
       ansible.builtin.debug:
         msg: "userinfo is : {{USERNAME}}"
 
+    - name: create user
+      ansible.builtin.command: useradd expense
+      when: USERNAME.rc != 0 #condition 
+
     - name: say Hello
       ansible.builtin.debug:
         msg: "HELLO"
