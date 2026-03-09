@@ -3,7 +3,7 @@
   tasks:
   - name: for default value
     ansible.builtin.debug:
-      msg: Hello , {{course | default('Ansible')}}
+      msg: Hello , {{ course | default('Ansible') }}
 
 - name: Upper case
   hosts: localhost
@@ -12,7 +12,7 @@
   tasks:
   - name: filter to upper case
     ansible.builtin.debug:
-      msg: "Hello , {{greetings | upper}}"
+      msg: "Hello , {{ greetings | upper }}"
 
 - name: lower case
   hosts: localhost
@@ -21,13 +21,13 @@
   tasks: 
   - name: filter to lower case
     ansible.builtin.debug:
-      msg: "Hello , {{greetings | lower}}"
+      msg: "Hello , {{ greetings | lower }}"
 
 - name: duplicate numbers
   hosts: local hosts
   vars:
-    numbers: [1 , 2 , 3 , 4 , 3 , 2]
+    numbers: [1 , 2 , 3 , 3 , 4 , 4]
   tasks:
   - name: removing duplicates
     ansible.builtin.debug:
-      mgs: "{{numbers | unique}}"
+      mgs: "{{ numbers | unique }}"
