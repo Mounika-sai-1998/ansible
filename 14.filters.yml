@@ -13,3 +13,12 @@
   - name: filter to upper case
     ansible.builtin.debug:
       msg: "Hello , {{greetings | upper}}"
+
+- name: lower case
+  hosts: localhost
+  vars:
+    greetings: Good Morning
+  tasks: 
+  - name: filter to lower case
+    ansible.builtin.debug:
+      msg: "Hello , {{greetins | lower}}"
