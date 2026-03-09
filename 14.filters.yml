@@ -1,60 +1,60 @@
-# - name: default value
-#   hosts: localhost
-#   tasks:
-#   - name: for default value
-#     ansible.builtin.debug:
-#       msg: Hello , {{ course | default('Ansible') }}
+- name: default value
+  hosts: localhost
+  tasks:
+  - name: for default value
+    ansible.builtin.debug:
+      msg: Hello , {{ course | default('Ansible') }}
 
-# - name: Upper case
-#   hosts: localhost
-#   vars:
-#     greetings: "Good Morning"
-#   tasks:
-#   - name: filter to upper case
-#     ansible.builtin.debug:
-#       msg: "Hello , {{ greetings | upper }}"
+- name: Upper case
+  hosts: localhost
+  vars:
+    greetings: "Good Morning"
+  tasks:
+  - name: filter to upper case
+    ansible.builtin.debug:
+      msg: "Hello , {{ greetings | upper }}"
 
-# - name: lower case
-#   hosts: localhost
-#   vars:
-#     greetings: Good Morning
-#   tasks: 
-#   - name: filter to lower case
-#     ansible.builtin.debug:
-#       msg: "Hello , {{ greetings | lower }}"
+- name: lower case
+  hosts: localhost
+  vars:
+    greetings: Good Morning
+  tasks: 
+  - name: filter to lower case
+    ansible.builtin.debug:
+      msg: "Hello , {{ greetings | lower }}"
 
-# - name: duplicate numbers
-#   hosts: localhost
-#   vars:
-#     numbers: [1 , 2 , 3 , 2 , 4 , 3]
-#   tasks:
-#   - name: removing duplicates
-#     ansible.builtin.debug:
-#       msg: "{{ numbers | unique }}"
+- name: duplicate numbers
+  hosts: localhost
+  vars:
+    numbers: [1 , 2 , 3 , 2 , 4 , 3]
+  tasks:
+  - name: removing duplicates
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"
 
-# - name: min and max numbers
-#   hosts: localhost
-#   vars:
-#     ages: [ 45 , 67 , 89 , 23 ]
-#   tasks:
-#   - name: to check min and max values
-#     ansible.builtin.debug:
-#       msg: "min age : {{ ages | min }} , max age {{ ages | max }}"
+- name: min and max numbers
+  hosts: localhost
+  vars:
+    ages: [ 45 , 67 , 89 , 23 ]
+  tasks:
+  - name: to check min and max values
+    ansible.builtin.debug:
+      msg: "min age : {{ ages | min }} , max age {{ ages | max }}"
 
-# - name: dictionary 
-#   hosts: localhost
-#   vars:
-#     dict_items:
-#       course: devops
-#       trainer: siva
-#       duration: "120 hrs"
-#   tasks:
-#   - name: before convert dictionary to list
-#     ansible.builtin.debug:
-#       msg: "before convert to list {{ dict_items }}"
-#   - name: after convert to list
-#     ansible.builtin.debug:
-#       msg: "after convert dictionary to list {{ dict_items | dict2items }}"
+- name: dictionary 
+  hosts: localhost
+  vars:
+    dict_items:
+      course: devops
+      trainer: siva
+      duration: "120 hrs"
+  tasks:
+  - name: before convert dictionary to list
+    ansible.builtin.debug:
+      msg: "before convert to list {{ dict_items }}"
+  - name: after convert to list
+    ansible.builtin.debug:
+      msg: "after convert dictionary to list {{ dict_items | dict2items }}"
 
 - name: list
   hosts: localhost
