@@ -24,7 +24,7 @@
       msg: "Hello , {{ greetings | lower }}"
 
 - name: duplicate numbers
-  hosts: localhosts
+  hosts: localhost
   vars:
     numbers: [1 , 2 , 3 , 2 , 4 , 3]
   tasks:
