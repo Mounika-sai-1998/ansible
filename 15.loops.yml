@@ -3,7 +3,7 @@
   tasks:
   - name: ex for loops
     ansible.builtin.debug:
-      msg: " Hello {{ items }}"
+      msg: " Hello {{ item }}"
       loops:
       - linux
       - ansible
