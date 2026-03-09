@@ -60,14 +60,14 @@
   hosts: localhost
   vars:
     my_list:
-    - {'key': 'course', 'value': 'Devops'}
+    - {'key': 'course' , 'value': 'Devops'}
     - {'key': 'trainer' , 'value': 'siva' }
     - {'key': 'duration' , 'value': '120 hrs'}
-    tasks:
-    - name: before converting list to dict
-      ansible.builtin.debug:
-        msg: "before converting list to dictionary {{ my_list }}"
-    - name: after converting list to dictionary
-      ansible.builtin.debug:
-        msg: " after converting list to dictionary {{ my_list | list2dict }}"
+  tasks:
+  - name: before converting list to dict
+    ansible.builtin.debug:
+       msg: "before converting list to dictionary {{ my_list }}"
+  - name: after converting list to dictionary
+    ansible.builtin.debug:
+      msg: " after converting list to dictionary {{ my_list | list2dict }}"
 
