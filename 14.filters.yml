@@ -24,9 +24,9 @@
       msg: "Hello , {{ greetings | lower }}"
 
 - name: duplicate numbers
-  hosts: local hosts
+  hosts: localhosts
   vars:
-    numbers: [1 , 2 , 3 , 3 , 4 , 4]
+    numbers: [1 , 2 , 3 , 2 , 4 , 3]
   tasks:
   - name: removing duplicates
     ansible.builtin.debug:
